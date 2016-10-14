@@ -27,6 +27,7 @@ $(document).ready(function() {
             url: '/items',
             success: function(newItems) {
                 if(itemsInStore === undefined) {
+                    console.log(newItems);
                     itemsInStore = newItems;
                     appendItems(itemsInStore);
                 } else if (itemsInStore.length < newItems.length || itemsInStore.length > newItems.length) {
